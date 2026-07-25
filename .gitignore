@@ -1,0 +1,9 @@
+build**/
+.vscode/
+__scripts
+**/.DS_Store
+__optcall.xml
+__membercall.xml
+/.vs
+**/.cache
+.idea/
