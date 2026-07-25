@@ -2,8 +2,6 @@
 Bindings for Legacy Edition!
 
 IDA 9.3 was used to get bindings \
-BromaIDA by SpaghettDev, then by Stazzical and then by me and my own fork :3
-
 Broma IDA was made by awesome people from Geode SDK, and thank you Staz/Stazzical for fixing Spaghett's bromaida
 
 > [!WARNING]
