@@ -16,6 +16,9 @@ Staz's BromaIDA was used to export the bindings
 - [ ] Get latest PS3 binaries
 - [ ] Write some sort of plugin to help me get bindings via debug prints?
 
+# How to contribute/get bindings
+what i did is just in ida just go around random functions and identify by debug prints, it works
+
 # Current progress:
 - PS3:    116/18161 bindings
 - PS4:    0/unkown  bindings
