@@ -2,7 +2,7 @@
 Bindings for Legacy Edition!
 
 IDA 9.3 was used to get bindings \
-Broma IDA was made by awesome people from Geode SDK, and thank you Staz/Stazzical for fixing Spaghett's bromaida
+Staz's BromaIDA was used to export the bindings
 
 > [!WARNING]
 > I have yet not finished getting more than enough bindings for Legacy Edition, only a **legally obtained** EBOOT.ELF/EBOOT.BIN file with the version number 1.02/TU2, Binary files are only going to be **obtainable** via dms or if you do it yourself.
