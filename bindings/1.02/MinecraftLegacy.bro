@@ -127,10 +127,12 @@ class LeaderboardManager {
 
 class LevelGenerationOptions {
 	static __int64 checkIntersects(__int64 a1, __int64 x0, __int64 y0, __int64 z0, __int64 x1, __int64 y1, __int64 z1) = ps3 0x6054c;
+	static void processSchematics(unsigned int* a1, unsigned int* chunk) = ps3 0x601f0;
+	static void processSchematicsLighting(__int64 a1, __int64 chunk) = ps3 0x60438;
 }
 
 class Minecraft {
-	static __int64 GetInstance(_QWORD) = ps3 0x17c284;
+	static GetInstance() = ps3 0x17c284;
 	static main() = ps3 0x184640;
 }
 
@@ -141,6 +143,7 @@ class SonyCommerce_PS3 {
 class SoundEngine {
 	static __int64 play(unsigned int* a1, int iSound, double x, double y, double z, double volume, double pitch) = ps3 0x3984c;
 	static __int64 playMusicUpdate(float*) = ps3 0x39d88;
+	static __int64 playStreaming(float*, __int64, double, double, double, double, double) = ps3 0x39aa4;
 	static __int64 playUI(unsigned int* a1, int iSound, double volume, double pitch) = ps3 0x39bc4;
 }
 
