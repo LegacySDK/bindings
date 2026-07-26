@@ -146,6 +146,17 @@ class Minecraft {
 	static main() = ps3 0x184640;
 }
 
+class PendingConnection {
+	static __int64 disconnect(__int64 a1, __int64 reason) = ps3 0x1b0efc;
+}
+
+class PlayerList {
+	static __int64 respawn(int*, unsigned int*, __int64, __int64, unsigned __int8) = ps3 0x1dad10;
+	static __int64 tick(_DWORD*) = ps3 0x1dd78c;
+	static __int64 toggleDimension(__int64, unsigned int*, int) = ps3 0x1dc3b0;
+	static va_list validatePlayerSpawnPosition(__int64 a1, unsigned int* a2, double x, double y, double z) = ps3 0x1d6ff8;
+}
+
 class SonyCommerce_PS3 {
 	static __int64 getCategoryInfo(__int64, __int64) = ps3 0x21037c;
 }
