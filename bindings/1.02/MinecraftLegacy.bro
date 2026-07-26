@@ -18,6 +18,10 @@ class ArchiveFile {
 	static __int64 getFile(unsigned int*, __int64, __int64) = ps3 0x131c0;
 }
 
+class C4JSpursJobQueue {
+	static __int64 Port(__int64, int) = ps3 0x21b40c;
+}
+
 class C4JThread {
 	static __int64 C4JThread(__int64 this, int startFunc, int param, const char* threadName, __int64 stackSize) = ps3 0x3a138c;
 }
@@ -55,7 +59,11 @@ class C_4JProfile {
 }
 
 class Chunk {
+	static __int64 Chunk(__int64 a1, int level, int a3, int a4, __int64 a5, __int64 a6, __int64 a7, __int64 clipChunk) = ps3 0x1bbe8;
+	static __int64 RunSPURebuild(_QWORD) = ps3 0x1b6e0;
+	static double distanceToSqr(int*, unsigned int*) = ps3 0x1cbc4;
 	static __int64 setPos(unsigned int* x, __int64 y, __int64 z, __int64 Unknown) = ps3 0x1b908;
+	static double squishedDistanceToSqr(int*, unsigned int*) = ps3 0x1cd10;
 }
 
 class ClientConnection {
@@ -193,6 +201,7 @@ class SonyCommerce_PS3 {
 
 class SoundEngine {
 	static unsigned int* ConvertSoundPathToName(unsigned int*, _WORD*) = ps3 0x61c21c;
+	static va_list ErrorCallback(__int64 a1, const char* i_Details) = ps3 0x39588;
 	static __int64 play(unsigned int* a1, int iSound, double x, double y, double z, double volume, double pitch) = ps3 0x3984c;
 	static __int64 playMusicUpdate(float*) = ps3 0x39d88;
 	static __int64 playStreaming(float*, __int64, double, double, double, double, double) = ps3 0x39aa4;
