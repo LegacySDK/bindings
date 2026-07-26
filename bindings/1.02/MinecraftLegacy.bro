@@ -116,6 +116,10 @@ class GameRuleDefinition {
 	static va_list addAttribute(__int64, _DWORD*, __int64) = ps3 0x5ac2c;
 }
 
+class IUIScene_CraftingMenu {
+	static __int64 CheckRecipesAvailable(unsigned int*) = ps3 0x9bfa0;
+}
+
 class InputManager {
 	static __int64 ButtonPressed(__int64, int, unsigned __int8) = ps3 0x2c8a58;
 	static __int64 ButtonReleased(__int64, int, unsigned __int8) = ps3 0x2c8ac0;
@@ -141,6 +145,7 @@ class SonyCommerce_PS3 {
 }
 
 class SoundEngine {
+	static unsigned int* ConvertSoundPathToName(unsigned int*, _WORD*) = ps3 0x61c21c;
 	static __int64 play(unsigned int* a1, int iSound, double x, double y, double z, double volume, double pitch) = ps3 0x3984c;
 	static __int64 playMusicUpdate(float*) = ps3 0x39d88;
 	static __int64 playStreaming(float*, __int64, double, double, double, double, double) = ps3 0x39aa4;
@@ -180,6 +185,10 @@ class UIController {
 	static __int64* RefreshTooltips(__int64, __int64, __int64, __int64, __int64, __int64, __int64, __int64) = ps3 0xd8274;
 	static void ReloadSkin(__int64 this) = ps3 0xd661c;
 	static int handleKeyPress(__int64) = ps3 0xd5b2c;
+}
+
+class UIGroup {
+	static __int64 HandleDLCMountingComplete(__int64) = ps3 0xdd55c;
 }
 
 class UIScene {
