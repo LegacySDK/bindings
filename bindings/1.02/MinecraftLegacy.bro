@@ -202,7 +202,7 @@ class SonyCommerce_PS3 {
 class SoundEngine {
 	static unsigned int* ConvertSoundPathToName(unsigned int*, _WORD*) = ps3 0x61c21c;
 	static va_list ErrorCallback(__int64 a1, const char* i_Details) = ps3 0x39588;
-	static __int64 play(unsigned int* a1, int iSound, double x, double y, double z, double volume, double pitch) = ps3 0x3984c;
+	static __int64 playIfNotNegativeOneBecauseFuckNegativeOne(unsigned int* a1, int iSound, double x, double y, double z, double volume, double pitch) = ps3 0x3984c;
 	static __int64 playMusicUpdate(float*) = ps3 0x39d88;
 	static __int64 playStreaming(float*, __int64, double, double, double, double, double) = ps3 0x39aa4;
 	static __int64 playUI(unsigned int* a1, int iSound, double volume, double pitch) = ps3 0x39bc4;
