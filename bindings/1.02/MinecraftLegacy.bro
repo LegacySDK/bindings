@@ -22,6 +22,10 @@ class C4JThread {
 	static __int64 C4JThread(__int64 this, int startFunc, int param, const char* threadName, __int64 stackSize) = ps3 0x3a138c;
 }
 
+class CConsoleMinecraftApp {
+	static void FatalLoadError(__int64) = ps3 0x21e060;
+}
+
 class CGameNetworkManager {
 	static __int64 CreateSocket(__int64, unsigned int*, unsigned __int8) = ps3 0x72930;
 	static va_list GameInviteReceived(__int64, __int64, __int64) = ps3 0x73580;
@@ -42,6 +46,12 @@ class CPlatformNetworkManagerSony {
 	static __int64 RemoveLocalPlayerByUserIndex(__int64) = ps3 0x74428;
 	static __int64 SetLocalGame(__int64, unsigned __int8) = ps3 0x74d58;
 	static va_list SetPrivateGame(__int64, unsigned __int8) = ps3 0x74e08;
+}
+
+class C_4JProfile {
+	static __int64 RegisterAward(__int64, __int64, __int64, __int64, unsigned __int8) = ps3 0x2cf26c;
+	static __int64 RichPresenceInit(_QWORD, _QWORD, _QWORD) = ps3 0x2cf49c;
+	static __int64 SetRichPresenceSettingFn(_QWORD, _QWORD) = ps3 0x2cf524;
 }
 
 class Chunk {
@@ -120,6 +130,10 @@ class IUIScene_CraftingMenu {
 	static __int64 CheckRecipesAvailable(unsigned int*) = ps3 0x9bfa0;
 }
 
+class IggyResult {
+	static __int64 IggyPlayerCallMethodRS(__int64, unsigned int, unsigned int, unsigned int, int, unsigned int) = ps3 0x763c88;
+}
+
 class InputManager {
 	static __int64 ButtonPressed(__int64, int, unsigned __int8) = ps3 0x2c8a58;
 	static __int64 ButtonReleased(__int64, int, unsigned __int8) = ps3 0x2c8ac0;
@@ -146,6 +160,12 @@ class Minecraft {
 	static main() = ps3 0x184640;
 }
 
+class PS3_Minecraft {
+	static __int64 LOAD_PS3_MODULE(_QWORD) = ps3 0x8ac514;
+	static LoadSysModules() = ps3 0x2217fc;
+	static RegisterAwardsWithProfileManager() = ps3 0x221098;
+}
+
 class PendingConnection {
 	static __int64 disconnect(__int64 a1, __int64 reason) = ps3 0x1b0efc;
 }
@@ -157,8 +177,18 @@ class PlayerList {
 	static va_list validatePlayerSpawnPosition(__int64 a1, unsigned int* a2, double x, double y, double z) = ps3 0x1d6ff8;
 }
 
+class ProfileManager {
+	static __int64 SetGetStringFunc(_QWORD, _QWORD) = ps3 0x2cef6c;
+	static __int64 SetPlayerListTitleID(_QWORD, _QWORD) = ps3 0x2cef98;
+	static __int64 SetSignInQuestionID(_QWORD, _QWORD) = ps3 0x2ceff0;
+}
+
 class SonyCommerce_PS3 {
+	static __int64 UpgradeTrialCallback1(unsigned int*, __int64, __int64, __int64, __int64, __int64, __int64, __int64) = ps3 0x211248;
+	static __int64 UpgradeTrialCallback2(unsigned int*, __int64, __int64, __int64, __int64, __int64, __int64, __int64) = ps3 0x2113d0;
 	static __int64 getCategoryInfo(__int64, __int64) = ps3 0x21037c;
+	static void* processEvent(__int64, __int64, __int64, __int64, __int64, __int64, __int64, __int64) = ps3 0x210c54;
+	static processMessage() = ps3 0x210814;
 }
 
 class SoundEngine {
@@ -170,6 +200,7 @@ class SoundEngine {
 }
 
 class StorageManager {
+	static __int64 Init(_QWORD, _QWORD, _QWORD, _QWORD, _QWORD, _QWORD, _QWORD, _QWORD) = ps3 0x2e3d04;
 	static SetDLCPackageRoot() = ps3 0x2e4244;
 }
 
@@ -219,6 +250,7 @@ class UIGroup {
 class UIScene {
 	static __int64 addTimer(__int64, int, int) = ps3 0xe20f0;
 	static __int64 getDebugMemoryUseRecursive(__int64 moviePath, __int64 memoryInfo, unsigned int* a3) = ps3 0xe1870;
+	static __int64 getMovie(__int64) = ps3 0x77474c;
 	static __int64 tick(__int64) = ps3 0xe202c;
 }
 
