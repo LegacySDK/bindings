@@ -125,6 +125,12 @@ class InputManager {
 	static __int64 ButtonReleased(__int64, int, unsigned __int8) = ps3 0x2c8ac0;
 }
 
+class ItemRenderer {
+	static __int64 fillRect(__int64 a1, float* t, __int64 x, __int64 y, __int64 w, __int64 h, __int64 c) = ps3 0x163a10;
+	static __int64 renderAndDecorateItem(__int64 result, __int64, __int64, unsigned int*, double, double, __int64, __int64, __int64, char, char) = ps3 0x1631f8;
+	static __int64 renderGuiItem(__int64, __int64, __int64, unsigned int*) = ps3 0x162230;
+}
+
 class LeaderboardManager {
 	static __int64 printStats(unsigned int*) = ps3 0x6e65c;
 }
@@ -156,8 +162,16 @@ class StorageManager {
 	static SetDLCPackageRoot() = ps3 0x2e4244;
 }
 
+class System {
+	static __int64 currentTimeMillis(__int64, __int64, void*, void*, void*, void*, void*) = ps3 0x4e204c;
+}
+
 class Tesselator {
 	static __int64 CreateNewThreadStorage(_QWORD) = ps3 0x288e24;
+	static __int64 begin(_QWORD) = ps3 0x289148;
+	static __int64 color(_QWORD, _QWORD) = ps3 0x289a88;
+	static __int64 end(_QWORD) = ps3 0x288f74;
+	static unsigned __int64 vertex(float*, double, double, double) = ps3 0x289458;
 }
 
 class TexturePackRepository {
@@ -192,7 +206,9 @@ class UIGroup {
 }
 
 class UIScene {
+	static __int64 addTimer(__int64, int, int) = ps3 0xe20f0;
 	static __int64 getDebugMemoryUseRecursive(__int64 moviePath, __int64 memoryInfo, unsigned int* a3) = ps3 0xe1870;
+	static __int64 tick(__int64) = ps3 0xe202c;
 }
 
 class UIScene_AbstractContainerMenu {
@@ -201,12 +217,16 @@ class UIScene_AbstractContainerMenu {
 
 class UIScene_HUD {
 	static __int64 SetAir(unsigned int*, unsigned int show) = ps3 0xf8dc8;
+	static __int64 SetArmour(unsigned int*, unsigned int iArmour) = ps3 0xf8e94;
 	static float* SetDragonHealth(float* health, double something) = ps3 0xf76dc;
 	static __int64 SetFoodSaturationLevel(unsigned int* m_lastSaturation, int iSaturation) = ps3 0xf94d0;
+	static __int64 SetRegenerationEffect(unsigned int* a1, unsigned __int8 show) = ps3 0xf93e8;
 	static __int64 ShowAir(unsigned int* a1, unsigned __int8 show) = ps3 0xf9130;
 	static __int64 ShowArmour(unsigned int*, unsigned __int8) = ps3 0xf9218;
 	static __int64 ShowDragonHealth(unsigned int* m_funcShowDragonHealth, unsigned __int8 show) = ps3 0xf75f4;
 	static __int64 ShowExpBar(unsigned int* a1, unsigned __int8 show) = ps3 0xf9300;
+	static __int64 ShowFood(unsigned int*, unsigned __int8) = ps3 0xf9048;
+	static __int64 ShowHealth(unsigned int*, unsigned __int8) = ps3 0xf8f60;
 	static __int64 repositionHud(unsigned int*) = ps3 0xf83a8;
 }
 
@@ -222,6 +242,12 @@ class UIScene_JoinMenu {
 class UIScene_LoadMenu {
 	static __int64 ConfirmLoadReturned(__int64) = ps3 0x10010c;
 	static __int64 UIScene_LoadMenu(__int64, __int64, _DWORD*, __int64) = ps3 0xfe3f8;
+}
+
+class UIScene_LoadOrJoinMenu {
+	static __int64 LoadSaveCallback(__int64 a1, char bRes) = ps3 0x10476c;
+	static __int64 LoadSaveDataThumbnailReturned(__int64 a1, unsigned __int64 pbThumbnail, unsigned __int64 dwThumbnailBytes) = ps3 0x104638;
+	static unsigned __int64 tick(unsigned int*) = ps3 0x103f38;
 }
 
 class UseTileRuleDefinition {
@@ -260,6 +286,10 @@ class m_schematic {
 
 class rule {
 	static __int64 getMinY(unsigned int*, __int64, __int64, __int64, __int64, __int64, __int64) = ps3 0x661f0;
+}
+
+class textures {
+	static __int64 bindTexture(_QWORD, _QWORD) = ps3 0x293840;
 }
 
 class ui {
