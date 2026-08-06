@@ -166,10 +166,11 @@ class LevelGenerationOptions {
 class Minecraft {
 	static GetInstance() = ps3 0x17c284;
 	static main() = ps3 0x184640;
+	static __int64 run_middle(__int64, __int64, void*, void*, void*, void*, void*) = ps3 0x180948;
 }
 
 class PS3_Minecraft {
-	static __int64 LOAD_PS3_MODULE(_QWORD) = ps3 0x8ac514;
+	static LOAD_PS3_MODULE() = ps3 0x8ac514;
 	static LoadSysModules() = ps3 0x2217fc;
 	static RegisterAwardsWithProfileManager() = ps3 0x221098;
 }
@@ -191,6 +192,21 @@ class ProfileManager {
 	static __int64 SetSignInQuestionID(_QWORD, _QWORD) = ps3 0x2ceff0;
 }
 
+class SQRNetworkManager {
+	static __int64 AcquireServerContext(__int64) = ps3 0x216504;
+	static __int64 FriendRoomManagerSearch(_DWORD*) = ps3 0x216800;
+	static __int64 GetMatchingContext(__int64, __int64) = ps3 0x216260;
+	static __int64 GetServerContext(__int64 a1, __int16 serverId) = ps3 0x216d1c;
+	static __int64 GetServerContext2(__int64) = ps3 0x216414;
+	static __int64 InitialiseAfterOnline(__int64) = ps3 0x215db8;
+	static __int64 RegisterCallbacks(__int64) = ps3 0x215c40;
+	static __int64 RoomCreateTick(__int64) = ps3 0x215468;
+	static __int64 SelectRandomServer(__int64) = ps3 0x2155d4;
+	static __int64 SetState(__int64, int) = ps3 0x2139f0;
+	static __int64 Terminate(unsigned int*) = ps3 0x216100;
+	static void UpdateExternalRoomData(__int64 a1) = ps3 0x216704;
+}
+
 class SonyCommerce_PS3 {
 	static __int64 UpgradeTrialCallback1(unsigned int*, __int64, __int64, __int64, __int64, __int64, __int64, __int64) = ps3 0x211248;
 	static __int64 UpgradeTrialCallback2(unsigned int*, __int64, __int64, __int64, __int64, __int64, __int64, __int64) = ps3 0x2113d0;
@@ -202,7 +218,7 @@ class SonyCommerce_PS3 {
 class SoundEngine {
 	static unsigned int* ConvertSoundPathToName(unsigned int*, _WORD*) = ps3 0x61c21c;
 	static va_list ErrorCallback(__int64 a1, const char* i_Details) = ps3 0x39588;
-	static __int64 playIfNotNegativeOneBecauseFuckNegativeOne(unsigned int* a1, int iSound, double x, double y, double z, double volume, double pitch) = ps3 0x3984c;
+	static __int64 playIfNotNegativeOneBecauseFuckNegativeOne(unsigned int*, int iSound, double x, __int64, __int64, __int64, __int64, __int64, double y, double z, double volume, double pitch) = ps3 0x3984c;
 	static __int64 playMusicUpdate(float*) = ps3 0x39d88;
 	static __int64 playStreaming(float*, __int64, double, double, double, double, double) = ps3 0x39aa4;
 	static __int64 playUI(unsigned int* a1, int iSound, double volume, double pitch) = ps3 0x39bc4;
@@ -219,7 +235,7 @@ class System {
 
 class Tesselator {
 	static __int64 CreateNewThreadStorage(_QWORD) = ps3 0x288e24;
-	static __int64 begin(_QWORD) = ps3 0x289148;
+	static __int64 begin(__int64 result) = ps3 0x289148;
 	static __int64 color(_QWORD, _QWORD) = ps3 0x289a88;
 	static __int64 end(_QWORD) = ps3 0x288f74;
 	static unsigned __int64 vertex(float*, double, double, double) = ps3 0x289458;
@@ -325,7 +341,7 @@ class app {
 }
 
 class header {
-	static __int64 WriteHeader(_QWORD, _QWORD) = ps3 0x5a6054;
+	static __int64 WriteHeader(__int64, _DWORD*) = ps3 0x5a6054;
 }
 
 class m_locationBox {
