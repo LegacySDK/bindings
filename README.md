@@ -20,6 +20,7 @@ Staz's BromaIDA was used to export the bindings
 what i did is just in ida just go around random functions and identify by debug prints, it works
 
 # Current progress:
-- PS3:    208/18161 bindings
+- PS3:    208/18161 bindings (TU2)
 - PS4:    0/unkown  bindings
 - XBOX:   0/unknown bindings
+- WiiU    0/unknown bindings (no workie on ida)
